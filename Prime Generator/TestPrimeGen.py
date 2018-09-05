@@ -23,3 +23,8 @@ def main():
         print(prime)
 
 main()
+
+
+#Improvement ideas:
+#   -Determine a quick half-point check, as in stopping at p = i/2 (because any higher number has no way to be a prime)
+#   -Create a break condition in the for-loop after isprime != 0 to prevent over-evaluation
