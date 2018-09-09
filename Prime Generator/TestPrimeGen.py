@@ -1,3 +1,5 @@
+import math
+
 def main():
     i = 3
     intxt = input("Enter a nuber to stop at: ")
@@ -7,12 +9,11 @@ def main():
     j = 0
 
     while i < topout:
-        j = sqrt(i)
         for p in primelist:
             if i % p == 0:
                 isprime = 1
                 break
-            if j > p:
+            if p > math.sqrt(i):
                 break
 
         if isprime == 0:
