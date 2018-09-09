@@ -4,11 +4,16 @@ def main():
     topout = int(intxt)
     primelist = [2]
     isprime = 0
+    j = 0
 
     while i < topout:
+        j = sqrt(i)
         for p in primelist:
             if i % p == 0:
                 isprime = 1
+                break
+            if j > p:
+                break
 
         if isprime == 0:
             primelist.append(i)
@@ -26,5 +31,5 @@ main()
 
 
 #Improvement ideas:
-#   -Determine a quick half-point check, as in stopping at p = i/2 (because any higher number has no way to be a prime)
+#   -Determine a quick half-point check, as in stopping at p = root(i) (because any higher number has no way to be a prime)
 #   -Create a break condition in the for-loop after isprime != 0 to prevent over-evaluation
